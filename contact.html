@@ -2,16 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | ShopSmart</title>
   <link rel="stylesheet" href="styles/themes.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #609e19;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+    background-color: #4B0082;
+    padding: 15px;
+    text-align: center;
+    width: 98%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+footer {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .btn {
+      margin-top: 1.5rem;
+      padding: 0.75rem;
+      background-color: #007bff;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .info {
+      margin-top: 2rem;
+    }
+
+    .info h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .map {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .newsletter {
+      margin-top: 2rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Contact Us</h1>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+
+  <header>
+    <h1>Contact ShopSmart</h1>
+    <nav>
+      <a href="index.html" style="color: #fff; margin-right: 1rem;">Home</a>
+      <a href="about.html" style="color: #fff; margin-right: 1rem;">About</a>
+      <a href="products.html" style="color: #fff;">Products</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <form action="#" method="POST">
+      <h2>We'd love to hear from you!</h2>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+1234567890">
+
+      <label for="subject">Subject:</label>
+      <select id="subject" name="subject" required>
+        <option value="">-- Select --</option>
+        <option value="product">Product Inquiry</option>
+        <option value="order">Order Issue</option>
+        <option value="account">Account Help</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+
+      <label>
+        <input type="checkbox" name="newsletter" />
+        Subscribe to our newsletter for updates and deals.
+      </label>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <div class="info">
+      <h3>Our Office</h3>
+      <p>ShopSmart Inc.<br>
+      123 Market Street, Tech City<br>
+      Nairobi, Kenya<br>
+      Phone: +254 797 144-051<br>
+      Email:<a href="kimanievansonk@gmail.com">support@shopsmart.com</a></p>
+    </div>
+
+    <div class="map">
+      <h3>Find Us</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.013725019876!2d36.817223!3d-1.286389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10f8dbfbc3df%3A0x6d7df60f917c3d6b!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1614162643924!5m2!1sen!2ske"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 ShopSmart. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>

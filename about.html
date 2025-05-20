@@ -3,21 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
-  <link rel="stylesheet" href="styles/themes.css">
+  <title>About Us | ShopEase</title>
+  <link rel="stylesheet" href="styles/themes.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #609e19;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .team-member {
+      display: inline-block;
+      width: 30%;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .team-member img {
+      width: 100px;
+      border-radius: 50%;
+    }
+
+    blockquote {
+      background: #f0f0f0;
+      padding: 15px;
+      border-left: 5px solid #007BFF;
+      margin: 20px 0;
+    }
+  </style>
 </head>
 <body>
-  <header><h1>About Our Store</h1></header>
+  <header>
+    <h1>About Our Store</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
     <section>
       <h2>Who We Are</h2>
-      <p>We’re an eCommerce platform dedicated to delivering top-notch products across multiple categories including electronics, fashion, and more.</p>
+      <p>ShopSmart is a trusted global eCommerce platform committed to making online shopping simple, secure, and enjoyable. We bring together top-quality products across electronics, fashion, home goods, and lifestyle essentials—all in one place.</p>
     </section>
+
     <section>
       <h2>Our Mission</h2>
-      <p>To provide reliable, affordable, and high-quality items to customers globally while supporting local businesses.</p>
+      <p>To empower customers by offering the best deals, fast shipping, and unbeatable customer service. We aim to bridge the gap between quality goods and affordability while supporting eco-conscious and small business brands.</p>
+    </section>
+
+    <section>
+      <h2>Our Vision</h2>
+      <p>To become a household name in online retail by continually evolving with our customers' needs and pioneering innovations in delivery, customization, and product discovery.</p>
+    </section>
+
+    <section>
+      <h2>Our Core Values</h2>
+      <ul>
+        <li><strong>Integrity:</strong> We prioritize transparency and fairness in all interactions.</li>
+        <li><strong>Innovation:</strong> We embrace technology to offer smarter shopping experiences.</li>
+        <li><strong>Customer First:</strong> We listen, learn, and grow with our users.</li>
+        <li><strong>Diversity:</strong> We support brands from all backgrounds and celebrate inclusivity.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Meet the Team</h2>
+      <div class="team-member">
+        <img src="assets/image/founder1.jpg" alt="Jane Doe" />
+        <h4>Evanson Kimani</h4>
+        <p>CEO & Co-founder</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/image/founder2.jpg" alt="Mark Smith" />
+        <h4>Mercy Njeri</h4>
+        <p>CTO & Co-founder</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/image/founder3.jpg" alt="Sara Lee" />
+        <h4>Collins Scott</h4>
+        <p>COO</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Customer Testimonials</h2>
+      <blockquote>
+        "ShopSmart never disappoints! Fast shipping and great customer service. I love their eco-friendly options too!" — <em>Angela, NY</em>
+      </blockquote>
+      <blockquote>
+        "I’ve been shopping with ShopEase since 2021. It’s my go-to for all tech accessories and gifts." — <em>Kevin, Nairobi</em>
+      </blockquote>
+    </section>
+
+    <section>
+      <h2>Get in Touch</h2>
+      <p>Have questions or feedback? Visit our <a href="contact.html">Contact Page</a> or email us directly at <a href="mailto:kimanievansonk@gmail.com">support@shopsmart.com</a>.</p>
     </section>
   </main>
-  <footer>&copy; 2025 ShopEase</footer>
+
+  <footer>
+    &copy; 2025 ShopSmart. All rights reserved.
+  </footer>
 </body>
 </html>

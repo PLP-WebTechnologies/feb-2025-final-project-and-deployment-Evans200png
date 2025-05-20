@@ -1,27 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Your Cart | ShopSmart</title>
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #321891;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    .cart-image {
+      width: 90px;
+      height: auto;
+    }
+
+    .remove-btn {
+      color: red;
+      cursor: pointer;
+    }
+
+    .total-section {
+      text-align: right;
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .checkout-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #28a745;
+      color: white;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .checkout-btn:hover {
+      background-color: #218838;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Your Cart</h1>
+    <h1>Your Shopping Cart</h1>
     <nav>
       <ul>
+        <li><a href="index.html">Home</a></li>
         <li><a href="products.html">Products</a></li>
         <li><a href="checkout.html">Checkout</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <section id="cart-items">
-      <!-- Cart items will appear here -->
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Image</th>
+            <th>Price (KES)</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Wireless Headphones</td>
+            <td><img src="https://images.pexels.com/photos/205926/pexels-photo-205926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Headphones" class="cart-image" /></td>
+            <td>3,500</td>
+            <td>1</td>
+            <td>3,500</td>
+            <td><span class="remove-btn">X</span></td>
+          </tr>
+          <tr>
+            <td>Smartwatch Series 5</td>
+            <td><img src="./assets/image/watch.jpg" alt="Smartwatch" class="cart-image" /></td>
+            <td>6,200</td>
+            <td>2</td>
+            <td>12,400</td>
+            <td><span class="remove-btn">X</span></td>
+          </tr>
+          <tr>
+            <td>Portable Bluetooth Speaker</td>
+            <td><img src="./assets/image/speakers.jpg" alt="Speaker" class="cart-image" /></td>
+            <td>4,800</td>
+            <td>1</td>
+            <td>4,800</td>
+            <td><span class="remove-btn">X</span></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
-    <button id="checkout-btn">Proceed to Checkout</button>
+
+    <div class="total-section">
+      <p><strong>Subtotal:</strong> KES 20,700</p>
+      <p><strong>Shipping:</strong> KES 500</p>
+      <hr />
+      <p><strong>Total:</strong> <span style="color: green;">KES 21,200</span></p>
+    </div>
+
+    <div style="text-align: right;">
+      <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+    </div>
   </main>
-  <script src="scripts/cart.js"></script>
+
 </body>
 </html>

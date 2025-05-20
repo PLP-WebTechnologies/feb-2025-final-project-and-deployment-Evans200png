@@ -1,24 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Product Details | ShopSmart</title>
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main.css" />
+  <style>
+    /* Quick styling for the product detail page */
+    #product-detail {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+    }
+    .product-item {
+      margin-bottom: 40px;
+    }
+    .product-item img {
+      max-width: 300px;
+      border-radius: 6px;
+    }
+    .product-info {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .product-description {
+      max-width: 500px;
+    }
+    .price {
+      font-size: 1.4em;
+      color: #e91e63;
+      margin: 10px 0;
+    }
+    .btn-buy {
+      background-color: #e91e63;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-buy:hover {
+      background-color: #c7155a;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Product Details</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
-    <div id="product-detail">
-      <!-- JS will load product info -->
-    </div>
+    <section id="product-detail">
+
+      <!-- Product 1 -->
+      <div class="product-item" id="product-101">
+        <h2>Gaming Laptop X15 Pro</h2>
+        <div class="product-info">
+          <img src="./assets/image/laptop1.jpg" alt="Gaming Laptop X15 Pro" />
+          <div class="product-description">
+            <p><strong>Description:</strong> Experience cutting-edge gaming performance with the X15 Pro featuring an Intel i9 processor, 32GB RAM, and NVIDIA RTX 4080 graphics card.</p>
+            <p><strong>Features:</strong></p>
+            <ul>
+              <li>15.6-inch 4K UHD display with 144Hz refresh rate</li>
+              <li>Thunderbolt 4 and USB-C connectivity</li>
+              <li>RGB backlit keyboard with customizable zones</li>
+              <li>Advanced cooling system for sustained performance</li>
+              <li>Windows 11 Pro pre-installed</li>
+            </ul>
+            <p class="price">$2,499.99</p>
+            <button class="btn-buy" onclick="alert('Added Gaming Laptop X15 Pro to cart!')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-item" id="product-102">
+        <h2>Smartwatch Series 7</h2>
+        <div class="product-info">
+          <img src="./assets/image/watch1.jpg" alt="Smartwatch Series 7" />
+          <div class="product-description">
+            <p><strong>Description:</strong> Stay connected and track your health with the new Smartwatch Series 7. Waterproof, long battery life, and seamless smartphone integration.</p>
+            <p><strong>Features:</strong></p>
+            <ul>
+              <li>Always-on Retina display</li>
+              <li>ECG and blood oxygen monitoring</li>
+              <li>Sleep tracking and fitness coaching</li>
+              <li>GPS and cellular connectivity options</li>
+              <li>Compatible with iOS and Android</li>
+            </ul>
+            <p class="price">$399.99</p>
+            <button class="btn-buy" onclick="alert('Added Smartwatch Series 7 to cart!')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      
+    </section>
   </main>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const productId = params.get("id");
-    document.getElementById("product-detail").innerText = `Loading product #${productId}`;
-  </script>
 </body>
 </html>
+

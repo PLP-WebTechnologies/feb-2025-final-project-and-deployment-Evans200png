@@ -1,35 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login | ShopSmart</title>
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+    }
+
+    header {
+      background-color: #198a8a;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      color: #FFD700;
+    }
+
+    .auth-form {
+      background: white;
+      max-width: 400px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .auth-form h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .auth-form label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+    }
+
+    .auth-form input[type="email"],
+    .auth-form input[type="password"],
+    .auth-form input[type="text"] {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .auth-form .btn {
+      width: 100%;
+      background-color: #28a745;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .auth-form .btn:hover {
+      background-color: #218838;
+    }
+
+    .auth-form .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .auth-form .footer-links {
+      text-align: center;
+    }
+
+    .auth-form .footer-links a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .auth-form .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Login</h1>
+    <h1>ShopSmart</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="register.html">Register</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <form id="login-form">
-      <input type="text" placeholder="Username" required />
-      <input type="password" placeholder="Password" required />
-      <button type="submit">Login</button>
+
+  <section class="auth-form">
+    <h2>Login to Your Account</h2>
+    <form action="profile.html" method="POST" onsubmit="return validateLogin(event)">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+      <div class="options">
+        <label><input type="checkbox" id="rememberMe" /> Remember Me</label>
+        <a href="forgot-password.html">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="btn">Login</button>
     </form>
-    <p>Don't have an account? <a href="register.html">Register</a></p>
-  </main>
+
+    <div class="footer-links">
+      <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ShopSmart. All rights reserved.</p>
+  </footer>
+
   <script>
-    document.getElementById("login-form").onsubmit = (e) => {
-      e.preventDefault();
-      alert("Login successful!");
-      window.location.href = "profile.html";
-    };
+    // Basic login simulation
+    function validateLogin(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+
+      if (email === "user@example.com" && password === "password123") {
+        window.location.href = "profile.html";
+      } else {
+        alert("Invalid email or password. Try again.");
+      }
+    }
   </script>
 </body>
 </html>
